@@ -29,3 +29,31 @@ body {
   justify-content: space-between;
   margin-bottom: 30px;
 }
+
+.progress-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+
+  height: 4px;
+  width: 100%;
+
+  background-color: #e0e0e0;
+}
+
+.progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.4 ease;
+
+  height: 4px;
+  width: 0%;
+
+  background-color: #3498db;
+}
