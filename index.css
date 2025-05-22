@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
 body {
   background-color: #f6f7fb;
   font-family: "Muli", sans-serif;
@@ -41,7 +46,7 @@ body {
   height: 4px;
   width: 100%;
 
-  background-color: #e0e0e0;
+  background-color: var(--line-border-empty);
 }
 
 .progress {
@@ -55,5 +60,24 @@ body {
   height: 4px;
   width: 0%;
 
-  background-color: #3498db;
+  background-color: var(--line-border-fill);
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+
+  background-color: var(--line-border-empty);
+  color: #999;
+  border: 3px solid var(--line-border-empty);
+  border-radius: 50%;
+
+  transition: 0.4 ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
 }
