@@ -29,5 +29,8 @@ function update() {
     } else {
       circle.classList.remove("active");
     }
-  })
+  });
+
+  const activeCircles = document.querySelectorAll(".active");
 }
+
