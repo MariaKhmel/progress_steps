@@ -32,11 +32,6 @@ function update() {
   });
 
   const activeCircles = document.querySelectorAll(".active");
-  // progress.style.width = (activeCircles.length - 1) / (circles.length - 1) * 100 + "%";
-  progress.style.width = activeCircles.length / circles.length * 100;
-  console.log(activeCircles.length / circles.length * 100 + "%")
-  // 2 / 4 = 0.5;
-  // 3 / 4 = 0.75;
-  // 4 / 4 = 1;
+  progress.style.width = (activeCircles.length - 1) / (circles.length - 1) * 100 + "%";
 }
 
