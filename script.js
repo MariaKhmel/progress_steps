@@ -1,4 +1,4 @@
-const progress = document.getElementById("progres");
+const progress = document.getElementById("progress");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const circles = document.querySelectorAll(".circle");
@@ -32,5 +32,7 @@ function update() {
   });
 
   const activeCircles = document.querySelectorAll(".active");
+  progress.style.width = (activeCircles.length - 1) / (circles.length - 1) * 100 + "%";
+
 }
 
